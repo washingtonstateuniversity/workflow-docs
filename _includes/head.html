@@ -1,12 +1,31 @@
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+	<meta charset="utf-8">
+	<title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
 
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+	<!-- FAVICON -->
+	<link rel="shortcut icon" href="https://repo.wsu.edu/spine/1/favicon.ico" />
+
+	<!-- STYLESHEETS -->
+	<link href="https://repo.wsu.edu/spine/1/spine.min.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+	<link rel="stylesheet" id="open-sans-css"  href="//fonts.googleapis.com/css?family=Open+Sans%3A300%2C400%2C400italic%2C700%2C700italic&#038;subset=latin%2Clatin-ext&#038;" type="text/css" media="all" />
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+	<!-- RESPOND -->
+	<meta name="viewport" content="width=device-width, user-scalable=yes">
+
+	<!-- SCRIPTS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<script src="https://repo.wsu.edu/spine/1/spine.min.js"></script>
+	<!-- COMPATIBILITY -->
+	<!--[if lt IE 9]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<noscript><style>#spine .spine-sitenav ul ul li { display: block !important; }</style></noscript>
+
+	<!-- DOCS -->
+	<link type="text/plain" rel="author" href="https://repo.wsu.edu/spine/1/authors.txt">
+	<link type="text/html" rel="help" href="https://brand.wsu.edu">
+
+	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 </head>
