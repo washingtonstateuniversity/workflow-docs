@@ -54,11 +54,11 @@ The status of the listed domain should now change from "View CSR" to "Awaiting D
 
 This is where the process becomes less automated. Files exist in a handful of directories on the server and need to be moved to their appropriate locations.
 
-1. `/home/www-data/to-deploy/` contains the private and public keys awaiting deployment.
-1. `/etc/nginx/ssl/` is where nginx expects to find these keys.
-1. `/home/www-data/deployed/` is where these keys will go after deployment.
-1. `/home/www-data/04_generated_config.conf` is the nginx configuration containing all generated domain configurations.
-1. `/etc/nginx/sites-enabled/` is where nginx expects to find this file.
+* `/home/www-data/to-deploy/` contains the private and public keys awaiting deployment.
+* `/etc/nginx/ssl/` is where nginx expects to find these keys.
+* `/home/www-data/deployed/` is where these keys will go after deployment.
+* `/home/www-data/04_generated_config.conf` is the nginx configuration containing all generated domain configurations.
+* `/etc/nginx/sites-enabled/` is where nginx expects to find this file.
 
 The keys need to be copied to a new location, the generated nginx configuration needs to be moved, and the nginx server needs to be tested and reloaded.
 
@@ -69,7 +69,10 @@ The keys need to be copied to a new location, the generated nginx configuration 
 5. Move the files to their backup location with `mv /home/www-data/to-deploy/*.* /home/www-data/deployed/`.
 6. Navigate a directory up with `cd /home/www-data/`.
 7. Copy the generated nginx configuration with `cp /home/www-data/04_generated_config.conf /etc/nginx/sites-enabled/`. Choose yes to overwrite the existing file.
-8. Test the nginx configuration with `nginx -t`.
+8. Test the nginx configuration with `nginx -t`. See the below note before continuing.
+9. Reload the nginx configuration with `service nginx reload`.
+
+#### A note on nginx configuration testing
 
 You should see the following message after running `nginx -t`:
 
@@ -79,8 +82,6 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 ```
 
 If you do not see this message, then stop deployment and read the error carefully as it will usually explain the exact problem. Only continue deployment once `nginx -t` returns the expected lines above.
-
-9. Reload the nginx configuration with `service nginx reload`.
 
 The certificate and domain configuration are now live. If it is not already, DNS for this domain should be pointed to the server.
 
