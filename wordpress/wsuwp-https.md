@@ -43,7 +43,7 @@ Now that a CSR is available, it will be processed through InCommon to retrieve a
 	1. Server Software - Other.
 	1. CSR - Paste the full text of the CSR generated in the previous steps.
 	1. Common Name - Enter the domain used to generate the CSR. This will usually auto-populate once the CSR has been entered.
-		1. If requesting a Multi Domain certicicate, a Subject Alternative Names input will appear. Enter the `www` subdomain in this field.
+		1. If requesting a Multi Domain certificate, a Subject Alternative Names input will appear. Enter the `www` subdomain in this field.
 	1. Pass-phrase - Enter the pass-phrase.
 	1. Comments - This is used to help parse the incoming email and route it accordingly. A comment will usually be in the form of `subdomain.wsu.edu, WSUWP Platform, nginx, sha-2` to include basic information about the request and where the certificate will be installed.
 1. Click **Enroll**.
