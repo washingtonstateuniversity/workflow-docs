@@ -63,14 +63,10 @@ This is where the process becomes less automated. Files exist in a handful of di
 The keys need to be copied to a new location, the generated nginx configuration needs to be moved, and the nginx server needs to be tested and reloaded.
 
 1. SSH into the server.
-2. Navigate with `cd /home/www-data/to-deploy/`.
-3. List the files in the directory with `ls` and make sure these are domains that are ready to deploy.
-4. Copy the files to the expected location with `cp /home/www-data/to-deploy/*.* /etc/nginx/ssl/`. If a notice comes up to overwrite an existing file, it is fine to say yes.
-5. Move the files to their backup location with `mv /home/www-data/to-deploy/*.* /home/www-data/deployed/`.
-6. Navigate a directory up with `cd /home/www-data/`.
-7. Copy the generated nginx configuration with `cp /home/www-data/04_generated_config.conf /etc/nginx/sites-enabled/`. Choose yes to overwrite the existing file.
-8. Test the nginx configuration with `sudo nginx -t`. See the below note before continuing.
-9. Reload the nginx configuration with `sudo service nginx reload`.
+1. Navigate with `cd /home/www-data/`.
+1. Run the deployment script with `./deploy-certs.sh` or `sh deploy-certs.sh`.
+1. Test the nginx configuration with `sudo nginx -t`. See the below note before continuing.
+1. Reload the nginx configuration with `sudo service nginx reload`.
 
 #### A note on nginx configuration testing
 
