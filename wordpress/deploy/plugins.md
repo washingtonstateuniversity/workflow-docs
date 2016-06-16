@@ -3,7 +3,7 @@ layout: page
 title: Deploy WordPress Plugins
 ---
 
-## Deploy plugins on the WSUWP Platform
+## Overview
 
 Plugins on the WSUWP Platform are grouped into three categories:
 
@@ -15,9 +15,9 @@ Public plugins are most often available freely at wordpress.org/plugins and have
 
 The WSUWP Platform deployment process is initiated every time a tag is added to a repository. For a full description of the process, see the deployment overview document.
 
-### Individual plugins
+## Individual plugins
 
-### Public plugin collection
+## Public plugin collection
 
 The WSU public plugin collection is under the [WSUWP Build Plugins Public](https://github.com/washingtonstateuniversity/WSUWP-Build-Plugins-Public) repository. This can be checked out anywhere on a local machine and contains all of the files for every general public plugin we have installed on the WSUWP Platform.
 
@@ -36,6 +36,6 @@ When a plugin update is available, use the following steps:
 
 With 2 minutes, a Slack notification should appear in #wsuwp with a deployment notification and the latest plugin version will appear on the platform.
 
-### Private plugin collection
+## Private plugin collection
 
 The exact same process is used with the [WSUWP Build Plugins Private](https://github.com/washingtonstateuniversity/WSUWP-Build-Plugins-Private) collection, the only caveat being that upgrades are slightly harder to manage due to plugin licensing. Once you have the plugin, deployment follows the exact same steps.
