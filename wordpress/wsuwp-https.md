@@ -60,6 +60,8 @@ When the email arrives from InCommon with the certificate enrollment approval, t
 
 The status of the listed domain should now change from "View CSR" to "Awaiting Deployment". The server now has the private and public keys and has written a basic Nginx configuration for the domain.
 
+This process can be repeated as many times as necessary for pending certificates before moving on to deployment.
+
 ### Deploy the certificate on the server
 
 This is where the process becomes less automated. Files exist in a handful of directories on the server and need to be moved to their appropriate locations.
