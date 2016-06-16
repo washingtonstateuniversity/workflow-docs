@@ -13,6 +13,7 @@ To complete all of the steps below, you'll need a few things:
 * The InCommon access code and email address.
 * Access to the email address used with InCommon.
 * The pass-phrase used during certificate requests.
+* Access to the WSUWP server.
 
 ### Generate a CSR
 
