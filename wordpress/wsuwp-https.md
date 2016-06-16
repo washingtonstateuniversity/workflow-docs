@@ -5,6 +5,15 @@ title: HTTPS on the WSUWP Platform
 
 ## Overview
 
+### Requirements
+
+To complete all of the steps below, you'll need a few things:
+
+* Network admin access to wp.wsu.edu.
+* The InCommon access code and email address.
+* Access to the email address used with InCommon.
+* The pass-phrase used during certificate requests.
+
 ### Generate a CSR
 
 A CSR (Certificate Signing Request) is required in order to request a public key certificate from InCommon. This process is mostly automated and can be accessed under the main WSUWP network admin.
