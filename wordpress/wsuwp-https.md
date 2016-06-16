@@ -69,8 +69,8 @@ The keys need to be copied to a new location, the generated nginx configuration 
 5. Move the files to their backup location with `mv /home/www-data/to-deploy/*.* /home/www-data/deployed/`.
 6. Navigate a directory up with `cd /home/www-data/`.
 7. Copy the generated nginx configuration with `cp /home/www-data/04_generated_config.conf /etc/nginx/sites-enabled/`. Choose yes to overwrite the existing file.
-8. Test the nginx configuration with `nginx -t`. See the below note before continuing.
-9. Reload the nginx configuration with `service nginx reload`.
+8. Test the nginx configuration with `sudo nginx -t`. See the below note before continuing.
+9. Reload the nginx configuration with `sudo service nginx reload`.
 
 #### A note on nginx configuration testing
 
