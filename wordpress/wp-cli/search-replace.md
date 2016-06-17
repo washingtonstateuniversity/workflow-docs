@@ -9,6 +9,8 @@ title: Search and Replace with WP-CLI
 
 ### Move a site from one URL to another
 
+Note: The `wp` command should be run from directory in which WordPress is installed. Use `cd /var/www/wordpress/` to navigate there.
+
 The most common use of `wp search-replace` is to update URLs on a site when moving from `stage.site.wsu.edu` to `site.wsu.edu`.
 
 First, determine the site's ID. This can be done through the site's network admin in a browser or also via WP-CLI.
@@ -34,3 +36,5 @@ Note the `dry-run` at the end of each command. This allows you to test the comma
 If you are moving many sites at once and they share similar paths, plan the commands out well in advance so that you replace URLs in the correct order.
 
 Once content has been replaced, cache will need to be flushed to ensure a smooth transition.
+
+* `sudo service memcached restart`
