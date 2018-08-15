@@ -40,4 +40,4 @@ If you are moving many sites at once and they share similar paths, plan the comm
 
 Once content has been replaced, cache will need to be flushed to ensure a smooth transition.
 
-* `sudo service memcached restart`
+* `wp cache flush`
