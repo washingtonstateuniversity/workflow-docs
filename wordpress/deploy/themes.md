@@ -12,9 +12,11 @@ Themes on the WSUWP Platform are grouped into two categories:
 
 Public themes are most often available freely at wordpress.org/themes and have gone through a code review targeting security and performance.
 
-The WSUWP Platform deployment process is initiated every time a tag is added to a repository. For a full description of the process, see the deployment overview document.
+The WSUWP Platform deployment process is initiated every time a tag is added to a repository. For a full description of the process, see the [WSUWP Deployments plugin](https://github.com/washingtonstateuniversity/WSUWP-Deployment) documentation.
 
 ## Individual themes
+
+The set up and deployment processes for individual themes are covered in the [Overview](https://github.com/washingtonstateuniversity/WSUWP-Deployment#overview) section of the WSUWP Deployments documentation.
 
 ## Public theme collection
 

@@ -7,6 +7,9 @@ title: Search and Replace with WP-CLI
 
 *Command*: `wp search-replace "original term" "replacement term" wp_table_name --dry-run`
 
+*Update*: At some point, there was a change somewhere which necessitated that the `--url=<url>` argument be included in the command:
+`wp search-replace "original term" "replacement term" wp_table_name --url=example.com --dry-run`
+
 ### Move a site from one URL to another
 
 Note: The `wp` command should be run from directory in which WordPress is installed. Use `cd /var/www/wordpress/` to navigate there.
@@ -22,14 +25,14 @@ The ID of the site will be used to specify the targeted table names.
 
 There are 4 variations that you will want to consider running. In the examples below, replace `9999` with the site ID.
 
-* `wp search-replace "://stage.site.wsu.edu" "://site.wsu.edu" wp_9999_posts --dry-run`
-* `wp search-replace "://stage.site.wsu.edu" "://site.wsu.edu" wp_9999_postmeta --dry-run`
-* `wp search-replace ":\/\/stage.site.wsu.edu" ":\/\/site.wsu.edu" wp_9999_posts --dry-run`
-* `wp search-replace ":\/\/stage.site.wsu.edu" ":\/\/site.wsu.edu" wp_9999_postmeta --dry-run`
+* `wp search-replace "://stage.site.wsu.edu" "://site.wsu.edu" wp_9999_posts --url=stage.site.wsu.edu --dry-run`
+* `wp search-replace "://stage.site.wsu.edu" "://site.wsu.edu" wp_9999_postmeta --url=stage.site.wsu.edu --dry-run`
+* `wp search-replace ":\/\/stage.site.wsu.edu" ":\/\/site.wsu.edu" wp_9999_posts --url=stage.site.wsu.edu --dry-run`
+* `wp search-replace ":\/\/stage.site.wsu.edu" ":\/\/site.wsu.edu" wp_9999_postmeta --url=stage.site.wsu.edu --dry-run`
 
 The first two lines will catch most of the content. The second two lines target content that has been stored in a way which escapes slashes. If replacing content in a site with a path, the slashes are handled similarly.
 
-* `wp search-replace ":\/\/stage.site.wsu.edu\/path" ":\/\/path.site.wsu.edu" wp_9999_posts --dry-run`
+* `wp search-replace ":\/\/stage.site.wsu.edu\/path" ":\/\/path.site.wsu.edu" wp_9999_posts --url=stage.site.wsu.edu/path --dry-run`
 
 Note the `dry-run` at the end of each command. This allows you to test the command first to see how many results will replaced. Remove that from the line and the full query will run.
 
