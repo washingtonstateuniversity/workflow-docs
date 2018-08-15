@@ -13,9 +13,11 @@ Plugins on the WSUWP Platform are grouped into three categories:
 
 Public plugins are most often available freely at wordpress.org/plugins and have gone through a code review targeting security and performance. Private plugins are usually paid plugins that are not available at wordpress.org/plugins but have also gone through a similar code review.
 
-The WSUWP Platform deployment process is initiated every time a tag is added to a repository. For a full description of the process, see the deployment overview document.
+The WSUWP Platform deployment process is initiated every time a tag is added to a repository. For a full description of the process, see the [WSUWP Deployments plugin](https://github.com/washingtonstateuniversity/WSUWP-Deployment) documentation.
 
 ## Individual plugins
+
+The set up and deployment processes for individual plugins are covered in the [Overview](https://github.com/washingtonstateuniversity/WSUWP-Deployment#overview) section of the WSUWP Deployments documentation.
 
 ## Public plugin collection
 
