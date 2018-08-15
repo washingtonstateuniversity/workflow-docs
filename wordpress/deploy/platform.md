@@ -24,7 +24,7 @@ When a WordPress update is available, use the following steps (being sure to rep
     * `git fetch --all`
     * `git fetch --tags`
     * `git tag` (or `git tag -l --sort=-v:refname` if you have trouble seeing the latest tag)
-        * `q`you may need to exit with , depending on your application
+        * `q` may be required to exit, depending on your application.
 5. Check out the latest tag with `git checkout 4.9.6`.
 6. Sync WordPress to the Platform using `rsync --delete -rlgDh --exclude '.git' --exclude 'wp-content/plugins' --exclude 'wp-content/themes' ~/Development/wordpress/ ~/Development/vvv/www/wsuwp/www/wordpress/`.
 7. Navigate back to the local copy of the Platform (`cd ~/Development/vvv/www/wsuwp/`).
